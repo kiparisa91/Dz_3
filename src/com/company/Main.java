@@ -15,22 +15,27 @@ public class Main {
         }
 
         //Задача2
-        int clientDeviceYear = 2013;
+        int clientDeviceYear = 2015;
         if (clientDeviceYear < 2015 && clientIos == 0) {
             System.out.println("Установите облегченную версию для iOS");
-        } if (clientDeviceYear < 2015 && clientAnd == 1) {
+        } else if (clientDeviceYear < 2015 && clientAnd == 1) {
             System.out.println("Установите облегченную версию для Android");
-        } else {
-            System.out.println("Приложение устанавливается");
+        } else if (clientDeviceYear >=2015 && clientIos == 0){
+            System.out.println("Приложение устанавливается для iOS");
+        } else if (clientDeviceYear >=2015 && clientAnd == 1) {
+            System.out.println("Приложение устанавливается для Android");
         }
 
         //Задача3
         int year = 2021;
-        if (year % 4 == 0) {
-            System.out.println("Год является високосным");
+        if (year % 4 == 0 && year % 100 != 0) {
+               System.out.println("Год является високосным");
+        } else if (year % 4 == 0 && year % 400 == 0) {
+                System.out.println("Год является високосным");
         } else {
             System.out.println("Год не является високосным");
         }
+
 
         //Задача4
         int delyveryDistance = 95;
